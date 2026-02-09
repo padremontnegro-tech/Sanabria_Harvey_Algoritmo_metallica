@@ -1,0 +1,154 @@
+:root {
+  --bg: #000000;
+  --panel: #0e0e0e;
+  --panel2: #161616;
+  --border: #2a2a2a;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,.7);
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+h1 { margin: 6px 0; }
+.sub { color: var(--muted); margin: 0 0 10px; }
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px){
+  .grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.ghost {
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.danger {
+  background: #444;
+  color: #fff;
+}
+
+.question {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.duel {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media (min-width: 900px){
+  .duel { grid-template-columns: 1fr 1fr; }
+}
+
+.pick {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  text-align: left;
+  padding: 14px;
+}
+
+.tag {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 26px;
+  margin-right: 10px;
+  background: #fff;
+  color: #000;
+  font-weight: 900;
+}
+
+.topbox {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 120px;
+}
+
+.toprow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toprow:last-child {
+  border-bottom: 0;
+}
+
+.hint {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.foot {
+  color: var(--muted);
+}

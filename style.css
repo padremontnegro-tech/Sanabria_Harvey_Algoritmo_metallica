@@ -1,6 +1,6 @@
 :root {
   --bg: #000000;
-  --panel: #0e0e0e;
+  --panel: #0d0d0d;
   --panel2: #161616;
   --border: #2a2a2a;
   --text: #ffffff;
@@ -15,14 +15,22 @@ body {
   color: var(--text);
 }
 
+/* Layout */
+
 .wrap {
   max-width: 980px;
   margin: 0 auto;
   padding: 18px;
 }
 
-h1 { margin: 6px 0; }
-.sub { color: var(--muted); margin: 0 0 10px; }
+h1 {
+  margin: 6px 0;
+}
+
+.sub {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
 
 .grid {
   display: grid;
@@ -31,8 +39,12 @@ h1 { margin: 6px 0; }
 }
 
 @media (min-width: 900px){
-  .grid { grid-template-columns: 1fr 1fr 1fr; }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
+
+/* Cards */
 
 .card {
   background: var(--panel);
@@ -40,6 +52,8 @@ h1 { margin: 6px 0; }
   border-radius: 14px;
   padding: 14px;
 }
+
+/* Forms */
 
 label {
   display: block;
@@ -57,6 +71,8 @@ select {
   border: 1px solid var(--border);
 }
 
+/* Buttons */
+
 .row {
   display: flex;
   gap: 10px;
@@ -72,10 +88,14 @@ button {
   font-weight: 700;
 }
 
+/* Primary */
+
 .primary {
   background: #ffffff;
   color: #000000;
 }
+
+/* Secondary */
 
 .ghost {
   background: var(--panel2);
@@ -83,17 +103,24 @@ button {
   border: 1px solid var(--border);
 }
 
+/* Danger */
+
 .danger {
   background: #444;
-  color: #fff;
+  color: #ffffff;
 }
+
+/* Question */
 
 .question {
   background: var(--panel2);
   border: 1px solid var(--border);
   padding: 10px;
   border-radius: 12px;
+  color: var(--text);
 }
+
+/* Duel */
 
 .duel {
   display: grid;
@@ -102,28 +129,48 @@ button {
 }
 
 @media (min-width: 900px){
-  .duel { grid-template-columns: 1fr 1fr; }
+  .duel {
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
+/* Pick buttons (A vs B) */
 
 .pick {
   background: var(--panel2);
   border: 1px solid var(--border);
   text-align: left;
   padding: 14px;
+  color: var(--text);            /* 🔑 FORZAMOS TEXTO BLANCO */
 }
+
+.pick:hover {
+  border-color: #ffffff;
+}
+
+/* A / B tag */
 
 .tag {
   display: inline-block;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 6px;
   text-align: center;
-  line-height: 26px;
+  line-height: 28px;
   margin-right: 10px;
-  background: #fff;
-  color: #000;
+  background: #ffffff;          /* fondo blanco */
+  color: #000000;               /* letra negra */
   font-weight: 900;
 }
+
+/* Song title */
+
+.title {
+  color: var(--text);            /* 🔑 asegura que el nombre se vea */
+  vertical-align: middle;
+}
+
+/* Ranking */
 
 .topbox {
   background: var(--panel2);
@@ -138,11 +185,14 @@ button {
   justify-content: space-between;
   padding: 6px;
   border-bottom: 1px solid var(--border);
+  color: var(--text);
 }
 
 .toprow:last-child {
   border-bottom: 0;
 }
+
+/* Text helpers */
 
 .hint {
   color: var(--muted);
